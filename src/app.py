@@ -16,7 +16,7 @@ def run_script(use_saved_model=False):
                 print("Training new model...")
             print("Running main script...")
             main(train_df, validation_df)
-            print("Loading newly trained model and tokenizer...")
+            print("Loading the trained model and tokenizer...")
             tokenizer = AutoTokenizer.from_pretrained(output_dir)
             model = AutoModelForCausalLM.from_pretrained(output_dir)
 
@@ -40,9 +40,9 @@ def run_script(use_saved_model=False):
         iface.launch(share=True)
     except Exception as e:
         print(f"An error occurred: {str(e)}")
-        print("Falling back to training a new model...")
+        print("Training a new model...")
         main(train_df, validation_df)
-        print("Loading newly trained model and tokenizer...")
+        print("Loading the trained model and tokenizer...")
         tokenizer = AutoTokenizer.from_pretrained(output_dir)
         model = AutoModelForCausalLM.from_pretrained(output_dir)
         
