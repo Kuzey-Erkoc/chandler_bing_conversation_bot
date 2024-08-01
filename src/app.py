@@ -48,7 +48,6 @@ def run_script(use_saved_model=False):
         
         # Now proceed with the chatbot setup as before
         conversation = Conversation(model, tokenizer)
-        # ... (rest of the Gradio setup)
 
 if __name__ == "__main__":
     use_saved_model = True
