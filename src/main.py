@@ -46,7 +46,7 @@ class Conversation:
             do_sample=True, 
             top_k=100, 
             top_p=0.7,
-            temperature=0.8
+            temperature=0.25
         )
         response = self.tokenizer.decode(self.chat_history_ids[:, bot_input_ids.shape[-1]:][0], 
                                          skip_special_tokens=True)
