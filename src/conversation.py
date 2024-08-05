@@ -23,7 +23,7 @@ if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
 # Data loading and preprocessing
-chandler_bing_lines_dataset = pd.read_csv("data/cleaned_dataset.csv")
+chandler_bing_lines_dataset = pd.read_csv("data/friends_quotes.csv")
 number_of_examples = 7
 
 contexted = [[chandler_bing_lines_dataset["quote"][j] for j in range(i, i - number_of_examples - 1, -1)] 
